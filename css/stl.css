@@ -2,16 +2,16 @@ body{
     background-color: lightgray;
     margin: 0px;
     color: darkmagenta;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 1.6em;
+    text-align: center;
     font-size: 12px;
 }
 
 .container{
     margin: auto;
     width: 80%;
-    overflow:hidden;
-    text-align: center;
+    overflow: hidden;
 }
 
 .container h1{
@@ -27,7 +27,6 @@ body{
 }
 
 #navBar{
-    color: darkcyan;
     background-color: coral;
 }
 
@@ -37,8 +36,8 @@ body{
 }
 
 #navBar li{
-    display: inline;
-    margin-left: 40px;
+    display: inline;    /*muestra los elementos de la lista uno al lado del otro*/
+    margin-left: 20px;
 }
 
 #navBar a{
@@ -49,12 +48,60 @@ body{
 }
 
 #showcase{
+    padding: 0px;
     background-image: url('../img/showcase.png');
+    background-position: center, top;
+    background-repeat: no-repeat;
+    height: 100%; /*usare porcentaje para que el tamaño se rija por el contenido del showcase*/
+    /*min-height: 300px; /*fija el tamaño minimo pero permite que el showcase crezca con el conternido*/
+    margin-bottom: 30px;
 }
 
+#showcase h1{
+    font-size: 50px;
+}
+
+#main{
+    float: left;
+    width: 70%;
+    padding-right: 10px;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+#main h1{
+    font-size: 16px;
+    text-align: center;
+}
+
+#sidebar{
+    float: right;
+    width: 30%;
+    padding-left: 10px;
+    box-sizing: border-box;
+    background-color: darkgray;
+    text-align: justify;
+}
+
+
 #mainFooter{
+    background: coral;
     text-align: center;
     color: black;
-    margin-top: 100px;
+    position: relative;
     font: 18px bold;
+    margin-top: 100px;
 }
+
+@media(max-width:600px){
+    #main{
+        width: 100%;
+        float: none;
+    }
+
+    #sidebar{
+        width: 100%;
+        float: none;
+        margin-top: 10px;
+    }
+} /*los styles en el mediaquery solo va a afectar a estos elementos si son de tamaño menor a 600px*/
