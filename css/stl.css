@@ -1,7 +1,7 @@
 body{
-    background-color: lightgray;
+    background-color: black;
     margin: 0px;
-    color: darkmagenta;
+    color: darkgoldenrod;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 1.6em;
     text-align: center;
@@ -21,13 +21,13 @@ body{
 }
 
 #mainHeader{
-    background-color: lightskyblue;
-    color: darkred;
+    background-color: black;
+    color: darkgoldenrod;
     text-align: center;
 }
 
 #navBar{
-    background-color: coral;
+    background-color: silver;
 }
 
 #navBar ul{
@@ -42,15 +42,15 @@ body{
 
 #navBar a{
     text-decoration: none;
-    color: white;
+    color: darkblue;
     font-size: 16px;
-    padding-right: 15px;     
+    padding-right: 15px;
 }
 
 #showcase{
     background-image: url('../img/showcase.png');
-    background-position: center, top;
-    background-repeat: no-repeat;
+    background-position: top, left;
+    background-size: cover;
     height: 100%; /*usare porcentaje para que el tamaño se rija por el contenido del showcase*/
     /*min-height: 300px; /*fija el tamaño minimo pero permite que el showcase crezca con el conternido*/
     margin-bottom: 30px;
@@ -58,12 +58,14 @@ body{
 
 #showcase h1{
     font-size: 50px;
+    color: black;
 }
 
 #main{
+    margin-top: 30px;
     float: left;
     width: 70%;
-    padding-right: 10px;
+    padding: 5px;
     box-sizing: border-box;
     text-align: justify;
 }
@@ -74,22 +76,25 @@ body{
 }
 
 #sidebar{
+    margin-top: 50px;
     float: right;
-    width: 30%;
-    padding-left: 10px;
+    width: 28%;
+    border-radius: 15px;
+    color: darkblue;
+    padding: 5px;
     box-sizing: border-box;
-    background-color: darkgray;
+    background-color: silver;
     text-align: justify;
 }
 
 
 #mainFooter{
-    background: coral;
+    background: silver;
     text-align: center;
-    color: black;
-    position: relative;
+    color: darkblue;
     font: 18px bold;
-    margin-top: 100px;
+    margin-top: 70px;
+    padding: 5px;
 }
 
 @media(max-width:600px){
@@ -100,12 +105,12 @@ body{
     }
 
     #navBar li{
-        margin-left: 10px;
+        margin-left: 5px;
     }
 
     #sidebar{
         width: 100%;
         float: none;
-        margin-top: 10px;
+        margin-top: px;
     }
 } /*los styles en el mediaquery solo va a afectar a estos elementos si son de tamaño menor a 600px*/
